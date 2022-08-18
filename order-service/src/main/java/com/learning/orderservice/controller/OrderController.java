@@ -18,8 +18,8 @@ public class OrderController {
     OrderServiceImpl orderServiceImpl;
 
     @GetMapping("/calculatePrice")
-    public ResponseEntity<?> calculatePrice(@RequestParam("ItemId") String ItemId, @RequestParam("quantity") int quantity) {
-        CalPriceResponse calPriceResponse = orderServiceImpl.calculatePriceService(ItemId, quantity);
+    public ResponseEntity<?> calculatePrice(@RequestParam("ItemId") String itemId, @RequestParam("quantity") int quantity) {
+        CalPriceResponse calPriceResponse = orderServiceImpl.calculatePriceService(itemId, quantity);
         return new ResponseEntity<>(calPriceResponse, HttpStatus.OK);
 
     }

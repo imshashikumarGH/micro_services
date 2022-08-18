@@ -1,4 +1,4 @@
-package com.learning.orderservice.dao.orderDaoImpl;
+package com.learning.orderservice.dao.Impl;
 
 import com.learning.orderservice.dao.OrderDao;
 import org.springframework.stereotype.Repository;
