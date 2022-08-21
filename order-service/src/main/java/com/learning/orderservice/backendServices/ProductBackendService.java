@@ -6,7 +6,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "product-servies", url = "localhost:8081")
+//@FeignClient(name = "product-servies", url = "localhost:8081")
+// required with if naming server not present
+// Issue - load balancing is not possible because of hard coded value of url
+// Solution - naming server (does load balancing automatically)
+@FeignClient(name = "PRODUCT-SERVICE")
 public interface ProductBackendService {
 
     @GetMapping(value = "/product/getPrice/{productId}")
