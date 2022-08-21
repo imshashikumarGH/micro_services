@@ -32,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
                 CalPriceResponse calPriceResponse = CalPriceResponse.builder().totalPrice(price * quantity).quantity(quantity).itemId(itemId).build();
                 return calPriceResponse;
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             log.error(e.getMessage());
             log.error("Fails to get response from Product services");
 
